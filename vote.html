@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Abstimmen – Messe-Content-Team</title>
+<style>
+:root{--bg:#070d24;--card:#101a3f;--ink:#f2f6ff;--mut:#9fb0d8;--a:#2cc4ff;--b:#ff6a3d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(900px 500px at 80% -10%,#16307a55,transparent),var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;display:flex;flex-direction:column;align-items:center;padding:28px 18px}
+main{width:100%;max-width:520px}
+.k{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--a);font-weight:700}
+h1{font-size:1.7rem;line-height:1.15;margin:10px 0 22px;letter-spacing:-.02em}
+button.o{display:block;width:100%;text-align:left;margin:0 0 12px;padding:18px 18px;border-radius:16px;border:1.5px solid #2a3b78;background:var(--card);color:var(--ink);font:inherit;font-size:1.08rem;font-weight:600;cursor:pointer;transition:transform .12s,border-color .12s,background .12s}
+button.o:active{transform:scale(.98)}
+button.o:hover,button.o:focus-visible{border-color:var(--a);outline:none}
+button.o.sel{background:linear-gradient(90deg,#14509a,#1a7fc4);border-color:var(--a)}
+.done{margin-top:20px;padding:16px;border-radius:14px;background:#0e2a4a;border:1px solid #2cc4ff55;font-weight:600}
+.mut{color:var(--mut);font-size:.9rem;margin-top:22px;line-height:1.5}
+.wait{padding:30px;text-align:center;color:var(--mut)}
+</style>
+</head>
+<body>
+<main id="m"><div class="wait">Verbinde …</div></main>
+<script src="polls.js"></script>
+<script src="store.js"></script>
+<script>
+const m=document.getElementById('m');let shown=null;
+Store.on((s,mode)=>{
+  const p=POLLS.find(x=>x.id===s.active)||POLLS[0];
+  if(shown===p.id+Store.hasVoted(p.id))return;shown=p.id+Store.hasVoted(p.id);
+  const voted=Store.hasVoted(p.id);
+  m.innerHTML='<div class="k">Live-Abstimmung</div><h1></h1><div id="opts"></div><div id="msg"></div><p class="mut">Ihre Stimme ist anonym. Die Ergebnisse erscheinen live auf der Leinwand.</p>';
+  m.querySelector('h1').textContent=p.q;
+  const box=m.querySelector('#opts');
+  p.options.forEach((t,i)=>{const b=document.createElement('button');b.className='o';b.textContent=t;b.disabled=voted;if(voted)b.style.opacity=.6;
+    b.onclick=async()=>{const r=await Store.vote(p.id,i);b.classList.add('sel');
+      m.querySelector('#msg').innerHTML='<div class="done">'+(r==='error'?'Das hat leider nicht geklappt. Bitte erneut versuchen.':'Danke! Ihre Stimme zählt. 🎉')+'</div>';
+      if(r!=='error')box.querySelectorAll('button').forEach(x=>x.disabled=true);};
+    box.appendChild(b);});
+  if(voted)m.querySelector('#msg').innerHTML='<div class="done">Sie haben bei dieser Frage bereits abgestimmt. Danke!</div>';
+});
+/* Wenn der Moderator zur nächsten Frage wechselt, erscheint sie automatisch */
+</script>
+</body>
+</html>

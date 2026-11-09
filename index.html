@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Das Messe-Content-Team für die Messe Düsseldorf</title>
+<meta name="description" content="Interaktive Pitch-Präsentation: Content für die Messe Düsseldorf – schnell, mehrsprachig, ganzjährig.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2712%27 fill=%27%23ff6a3d%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage" aria-hidden="true">
+  <div id="tilt"><div id="world"><svg id="map" width="3600" height="2000" viewBox="0 0 3600 2000"></svg></div></div>
+  <div class="vignette"></div><div class="scan"></div>
+</div>
+
+<header class="hud">
+  <div class="brand"><i></i><span>Messe-Content-Team</span><em>für die Messe Düsseldorf</em></div>
+  <div class="hud-r"><span id="mode" class="chip" title="Verbindung der Live-Abstimmung">Demo</span><button id="btnOverview" class="icon" aria-label="Übersicht (O)">▦</button><button id="btnFs" class="icon" aria-label="Vollbild (F)">⛶</button></div>
+</header>
+
+<main id="scenes">
+
+<!-- 0 Intro -->
+<section class="scene intro" data-title="Willkommen" data-cam="560,1450,1.15,34,-10">
+  <div class="panel hero">
+    <p class="kicker">Pitch für die Messe Düsseldorf</p>
+    <h1>Das Messe&#8209;<br>Content&#8209;Team<span class="grad"> stellt sich vor.</span></h1>
+    <p class="lead">Video, Foto, Text und Blog für Website und Social Media – von Menschen, die die Messe Düsseldorf kennen.</p>
+    <p class="hint">Weiter mit <kbd>→</kbd> oder Klick</p>
+  </div>
+</section>
+
+<!-- 1 Know-how -->
+<section class="scene" data-title="Unser Know-how" data-cam="1000,1250,1.35,38,6">
+  <div class="panel wide">
+    <p class="kicker">Station 1 · Unser Know-how</p>
+    <h2>Vier Formate. <span class="grad">Eine Redaktion.</span></h2>
+    <div class="grid4">
+      <div class="tile" data-s="1"><b>▶</b><h3>Video</h3><p>HD, 4K, 3D, 360°. Hochformat 9:16 und quadratisch 1:1.</p></div>
+      <div class="tile" data-s="2"><b>◉</b><h3>Foto</h3><p>Messe-Reportage, Porträts und Testimonials.</p></div>
+      <div class="tile" data-s="3"><b>¶</b><h3>Text</h3><p>Interviews, Newsmeldungen, Messe-CMS. Deutsch und Englisch.</p></div>
+      <div class="tile" data-s="4"><b>✎</b><h3>Blog</h3><p>Branchenstorys, die Besucher und Aussteller gern lesen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 Team -->
+<section class="scene" data-title="Das Team" data-cam="1400,1500,1.4,36,-8">
+  <div class="panel wide">
+    <p class="kicker">Station 2 · Ihr Team</p>
+    <h2>Vier Profis, <span class="grad">ein eingespieltes Team.</span></h2>
+    <div class="team">
+      <article class="person" data-s="1"><img src="media/image13.webp" alt="Frank Linke" loading="lazy"><div><h3>Frank Linke</h3><p class="role">Kamera, Schnitt, Messe-Berichterstattung</p><ul><li>Mediengestalter, Kameramann, Videoeditor</li><li>Hat die Messeberichterstattung für die Messe Düsseldorf etabliert</li><li>Kongress-Know-how, HD/3D/4K, 360°</li></ul></div></article>
+      <article class="person" data-s="2"><img src="media/image14.webp" alt="Emily Whigham" loading="lazy"><div><h3>Emily Whigham</h3><p class="role">Moderation, Redaktion, Englisch</p><ul><li>TV-Moderatorin (CNN, MTV, NBC Giga)</li><li>Events, Galas, Podien, Preisverleihungen</li><li>Native Speaker Englisch, Sprecherin</li></ul></div></article>
+      <article class="person" data-s="3"><img src="media/image15.webp" alt="Johannes Röder" loading="lazy"><div><h3>Johannes Röder</h3><p class="role">Strategie, Social Media, KPIs</p><ul><li>BWL, Online-Marketing-Manager, BAFA-Berater</li><li>Social-Media-Planung, Reporting, Influencer</li><li>Interview-Sessions für crossmedialen Einsatz</li></ul></div></article>
+      <article class="person" data-s="4"><img src="media/image16.webp" alt="Gesa Gröning" loading="lazy"><div><h3>Gesa Gröning</h3><p class="role">Moderation, PR-Redaktion, Messe-CMS</p><ul><li>Moderatorin (IMMO TV, Antenne Sylt, Messen)</li><li>PR-Redakteurin, strategische Beratung</li><li>Kennt das Messe-CMS und pflegt Inhalte ein</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Crew -->
+<section class="scene" data-title="Crew &amp; Pool" data-cam="1800,1100,1.5,40,10">
+  <div class="panel">
+    <p class="kicker">Station 3 · Team-Support</p>
+    <h2>Unser <span class="grad">„Pool of Friends“.</span></h2>
+    <p class="lead">Bei großen Produktionen verstärken uns Kamera-, Schnitt- und Social-Media-Crews, die für Sender und Unternehmen arbeiten.</p>
+    <div class="chips"><span data-s="1">KiKA</span><span data-s="1">ZDF</span><span data-s="2">ARTE</span><span data-s="2">WDR</span><span data-s="3">RTL</span><span data-s="3">Motorsport weltweit</span><span data-s="4">Reportagen</span><span data-s="4">Tagesaktuell</span></div>
+  </div>
+</section>
+
+<!-- 4 Poll 1 -->
+<section class="scene poll-scene" data-title="Live-Abstimmung" data-poll="p1" data-cam="2200,1450,1.45,32,-6">
+  <div class="panel wide pollpanel"><p class="kicker">Station 4 · Sie sind dran</p><div class="pollbox"></div></div>
+</section>
+
+<!-- 5 Speed -->
+<section class="scene" data-title="Tempo" data-cam="2500,1000,1.5,36,8">
+  <div class="panel wide">
+    <p class="kicker">Station 5 · Tempo &amp; Qualität</p>
+    <h2>Messetage sind kurz. <span class="grad">Wir sind schneller.</span></h2>
+    <div class="grid3">
+      <div class="stat" data-s="1"><b><span data-count="30">0</span>+</b><p>Interviews in 3 Messetagen als Video und Foto-Text/Testimonial</p></div>
+      <div class="stat" data-s="2"><b><span data-count="20">0</span>+</b><p>Social-Media-Clips zusätzlich in derselben Zeit</p></div>
+      <div class="stat" data-s="3"><b>DE<i>/</i>EN</b><p>Korrekturschleifen, optisch und inhaltlich, in beiden Sprachen</p></div>
+    </div>
+    <p class="note" data-s="4">Flexibel statt starr: Wir reagieren auf Social-Media-Reaktionen und Änderungen im Messe-CMS ohne feste Arbeitszeiten.</p>
+  </div>
+</section>
+
+<!-- 6 Jahreslauf -->
+<section class="scene" data-title="Ganzjährig" data-cam="2900,1350,1.25,34,-12">
+  <div class="panel wide">
+    <p class="kicker">Station 6 · Ganzjährige Betreuung</p>
+    <h2>Content, nicht nur <span class="grad">zur Messelaufzeit.</span></h2>
+    <div class="chain">
+      <div data-s="1"><b>1</b>Redaktionsplanung</div><div data-s="2"><b>2</b>Erstellen &amp; Kuratieren</div><div data-s="3"><b>3</b>Archivieren</div><div data-s="4"><b>4</b>Wiederverwerten</div><div data-s="5"><b>5</b>Analysieren</div>
+    </div>
+    <div class="cal" data-s="6">
+      <p class="mut">Der Messekalender der Messe Düsseldorf liefert den Takt (Quelle: messe-duesseldorf.de, Stand November 2026):</p>
+      <div class="cal-row"><span><b>MEDICA &amp; COMPAMED</b>16.–19. Nov 2026</span><span><b>VALVE WORLD EXPO</b>1.–3. Dez 2026</span><span><b>boot Düsseldorf</b>23.–31. Jan 2027</span><span><b>EuroCIS</b>16.–18. Feb 2027</span><span><b>ProWein</b>7.–9. Mär 2027</span><span><b>XPONENTIAL Europe</b>16.–18. Mär 2027</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 Videos -->
+<section class="scene" data-title="Beispiele" data-cam="2900,800,1.4,38,6">
+  <div class="panel wide">
+    <p class="kicker">Station 7 · Beispiele unserer Arbeit</p>
+    <h2>Sehen Sie selbst.</h2>
+    <div class="videos">
+      <figure data-s="1"><div class="vwrap"><video preload="none" poster="media/image17.webp" playsinline controls src="media/video1.mp4"></video></div><figcaption>Messe-Clip, quer</figcaption></figure>
+      <figure class="portrait" data-s="2"><div class="vwrap"><video preload="none" poster="media/image18.webp" playsinline controls src="media/video2.mp4"></video></div><figcaption>Hochformat für Social</figcaption></figure>
+      <figure class="portrait" data-s="3"><div class="vwrap"><video preload="none" poster="media/image19.webp" playsinline controls src="media/video3.mp4"></video></div><figcaption>Story-Format</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8 Zahlen -->
+<section class="scene" data-title="Wirkung" data-cam="2500,520,1.4,34,-6">
+  <div class="panel wide">
+    <p class="kicker">Station 8 · Wirkung messbar machen</p>
+    <h2>Instagram-Beispiel: <span class="grad">fast doppelt so viele Interaktionen.</span></h2>
+    <div class="bars">
+      <div class="bar" data-s="1"><label>Interagierende Accounts</label><div class="track"><i data-w="55"></i><i class="b2" data-w="100"></i></div><span>178 → 320 <strong>+79,8 %</strong></span></div>
+      <div class="bar" data-s="2"><label>Interaktionsrate zur Reichweite</label><div class="track"><i data-w="68"></i><i class="b2" data-w="100"></i></div><span>0,82 % → 1,21 % <strong>+47,8 %</strong></span></div>
+      <div class="bar" data-s="3"><label>Profilaufrufe</label><div class="track"><i data-w="86"></i><i class="b2" data-w="100"></i></div><span>377 → 439 <strong>+16,4 %</strong></span></div>
+    </div>
+    <p class="note" data-s="4"><i class="k1"></i> 18.11.–15.02. &nbsp; <i class="k2"></i> 16.02.–15.05.2022 · Beispielkunde Deli Genuss, rein organisch, ohne bezahlte Anzeigen.</p>
+  </div>
+</section>
+
+<!-- 9 Galerie -->
+<section class="scene" data-title="Organischer Content" data-cam="2000,600,1.4,36,10">
+  <div class="panel wide">
+    <p class="kicker">Station 9 · Organischer Content</p>
+    <h2>Content, der <span class="grad">Community aufbaut.</span></h2>
+    <div class="gallery">
+      <img data-s="1" src="media/image26.webp" alt="Gewinnspiel Picknick" loading="lazy"><img data-s="1" src="media/image27.webp" alt="Content-Raster" loading="lazy"><img data-s="2" src="media/image28.webp" alt="Food-Content" loading="lazy"><img data-s="2" src="media/image29.webp" alt="Rezept-Content" loading="lazy"><img data-s="3" src="media/image30.webp" alt="Produkt-Content" loading="lazy"><img data-s="3" src="media/image31.webp" alt="Aktions-Content" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 10 Poll 2 -->
+<section class="scene poll-scene" data-title="Live-Abstimmung 2" data-poll="p2" data-cam="1500,700,1.45,34,-8">
+  <div class="panel wide pollpanel"><p class="kicker">Station 10 · Noch eine Frage</p><div class="pollbox"></div></div>
+</section>
+
+<!-- 11 Vorteile -->
+<section class="scene" data-title="Ihre Vorteile" data-cam="1000,500,1.3,38,8">
+  <div class="panel wide">
+    <p class="kicker">Station 11 · Ihre Vorteile</p>
+    <h2>Warum <span class="grad">dieses Team?</span></h2>
+    <div class="grid3 small">
+      <div class="tile" data-s="1"><h3>Einfache Abstimmung</h3><p>Festes Team, das die Messe kennt: weniger Aufwand.</p></div>
+      <div class="tile" data-s="1"><h3>Schnell und spontan</h3><p>Professionelle Umsetzung auch kurzfristig.</p></div>
+      <div class="tile" data-s="2"><h3>Alle Kanäle, ganzjährig</h3><p>Website, Newsletter und Social Media aus einer Hand.</p></div>
+      <div class="tile" data-s="2"><h3>Kluge Content-Kette</h3><p>Planung, Erstellung, Archiv, Wiederverwertung, Auswertung.</p></div>
+      <div class="tile" data-s="3"><h3>Synergie-Effekt</h3><p>Weniger Mehrfachproduktion, mehr Reichweite pro Inhalt.</p></div>
+      <div class="tile" data-s="3"><h3>Native Speaker</h3><p>Deutsch und Englisch, sprachlich und inhaltlich geprüft.</p></div>
+      <div class="tile" data-s="4"><h3>Langjährige Verbundenheit</h3><p>Hohe Identifikation mit der Messe Düsseldorf.</p></div>
+      <div class="tile" data-s="4"><h3>Strategen und Ideengeber</h3><p>Wir entwickeln Formate gemeinsam weiter.</p></div>
+      <div class="tile" data-s="4"><h3>Nahbare Messe</h3><p>Konstante Community-Betreuung stärkt das Image.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 Kontakt -->
+<section class="scene outro" data-title="Next Step" data-cam="700,900,1.2,30,-6">
+  <div class="panel hero">
+    <p class="kicker">Next Step</p>
+    <h2 class="big">Weiter <span class="grad">zusammenarbeiten?</span></h2>
+    <p class="lead">Lassen Sie uns gemeinsam planen, wie die nächsten Messen erzählt werden.</p>
+    <div class="contacts">
+      <div><b>Frank Linke</b><a href="mailto:info@franklinke.tv">info@franklinke.tv</a><a href="tel:+491715353828">0171 53 53 828</a></div>
+      <div><b>Gesa Gröning</b><a href="mailto:groening@medien-fuer-sie.de">groening@medien-fuer-sie.de</a><a href="tel:+491703404033">0170 34 04 033</a></div>
+    </div>
+    <p class="copy">© Frank Linke, Gesa Gröning, Emily Whigham, Johannes Röder</p>
+  </div>
+</section>
+
+</main>
+
+<aside id="qrcard" class="qrcard" hidden><div id="qr"></div><div><b>Mitmachen</b><span id="qrurl"></span></div></aside>
+
+<nav class="nav" aria-label="Navigation"><button id="prev" aria-label="Zurück">←</button><div id="dots"></div><button id="next" aria-label="Weiter">→</button></nav>
+<div id="overview" hidden></div>
+<div id="progress"><i></i></div>
+
+<script src="vendor/qrcode.js"></script>
+<script src="polls.js"></script>
+<script src="config.js"></script>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
